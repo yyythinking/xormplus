@@ -6,8 +6,6 @@ package xorm
 
 import "C"
 import (
-	//"fmt"
-	"github.com/astaxie/beego/logs"
 	//"github.com/xormplus/xorm/log"
 	"github.com/xormplus/xorm/names"
 
@@ -23,7 +21,7 @@ import (
 type EngineGroup struct {
 	*Engine
 	subordinates []*Engine
-	policy GroupPolicy
+	policy       GroupPolicy
 }
 
 // NewEngineGroup creates a new engine group
@@ -39,7 +37,7 @@ func NewPostgresEngineGroup(args1 interface{}, policies ...GroupPolicy) (*Engine
 	if ok1 {
 		engines := make([]*Engine, len(conns))
 		for i, conn := range conns {
-			engine ,err := NewPostgreSQL(conn)
+			engine, err := NewPostgreSQL(conn)
 			if err != nil {
 				return nil, ErrParamsType
 			}
@@ -50,7 +48,6 @@ func NewPostgresEngineGroup(args1 interface{}, policies ...GroupPolicy) (*Engine
 
 		eg.Engine = engines[0]
 		eg.subordinates = engines[1:]
-		logs.Info("-------eg.subordinates-------",len(eg.subordinates))
 		return &eg, nil
 	}
 	return nil, ErrParamsType
@@ -142,4 +139,3 @@ func (eg *EngineGroup) SetLogLevel(level core.LogLevel) {
 		eg.subordinates[i].Logger().SetLevel(level)
 	}
 }
-
