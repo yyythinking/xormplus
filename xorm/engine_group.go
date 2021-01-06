@@ -53,6 +53,28 @@ func NewPostgresEngineGroup(args1 interface{}, policies ...GroupPolicy) (*Engine
 	return nil, ErrParamsType
 }
 
+func (engine *EngineGroup) SetSqlTemplateRootDir(sqlTemplateRootDir string) *EngineGroup {
+	engine.sqlTemplate.SqlTemplateRootDir = sqlTemplateRootDir
+	for i := 0; i < len(engine.subordinates); i++ {
+		engine.subordinates[i].SetSqlTemplateRootDir(sqlTemplateRootDir)
+	}
+	return engine
+}
+
+func (engine *EngineGroup) InitSqlTemplate(options SqlTemplateOptions) error {
+	err := engine.Engine.InitSqlTemplate(options)
+	if err != nil {
+		return err
+	}
+	for i := 0; i < len(engine.subordinates); i++ {
+		err = engine.subordinates[i].InitSqlTemplate(options)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
 // Close the engine
 func (eg *EngineGroup) Close() error {
 	err := eg.Engine.Close()
