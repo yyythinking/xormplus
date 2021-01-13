@@ -109,9 +109,19 @@ func (eg *EngineGroup) Subordinate() *Engine {
 	case 0:
 		return eg.Engine
 	case 1:
-		return eg.subordinates[0]
+		if err := eg.subordinates[0].Ping(); err == nil {
+			return eg.subordinates[0]
+		} else {
+			return eg.Engine
+		}
 	}
-	return eg.policy.Subordinate(eg)
+	for i := 0; i < 10; i++ {
+		engine := eg.policy.Subordinate(eg)
+		if err := engine.Ping(); err == nil {
+			return engine
+		}
+	}
+	return eg.Engine
 }
 
 // SetMaxIdleConns set the max idle connections on pool, default is 2
