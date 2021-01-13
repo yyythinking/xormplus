@@ -115,7 +115,7 @@ func (eg *EngineGroup) Subordinate() *Engine {
 			return eg.Engine
 		}
 	}
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 3; i++ {
 		engine := eg.policy.Subordinate(eg)
 		if err := engine.Ping(); err == nil {
 			return engine
