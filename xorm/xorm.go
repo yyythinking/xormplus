@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xormplus/core"
+	"github.com/yyythinking/xormplus/core"
 )
 
 const (

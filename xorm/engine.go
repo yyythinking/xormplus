@@ -20,15 +20,15 @@ import (
 	"time"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/xormplus/core"
+	"github.com/yyythinking/xormplus/core"
 )
 
 // Engine is the major struct of xorm, it means a database manager.
 // Commonly, an application only need one engine.
 type Engine struct {
-	db      *core.DB
-	dialect core.Dialect
-	engineGroup    *EngineGroup
+	db          *core.DB
+	dialect     core.Dialect
+	engineGroup *EngineGroup
 
 	ColumnMapper  core.IMapper
 	TableMapper   core.IMapper
