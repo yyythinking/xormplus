@@ -8,7 +8,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/xormplus/xorm/contexts"
+	"github.com/yyythinking/xormplus/xorm/contexts"
 )
 
 var (

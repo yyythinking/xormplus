@@ -1,2 +1,2 @@
 # xormplus
-请参考 https://github.com/xormplus/xorm
+请参考 https://github.com/yyythinking/xormplus/xorm

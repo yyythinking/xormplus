@@ -1,4 +1,4 @@
-module github.com/xormplus/builder
+module github.com/yyythinking/xormplus/builder
 
 go 1.11
 

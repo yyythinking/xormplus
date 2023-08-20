@@ -13,7 +13,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/xormplus/xorm/names"
+	"github.com/yyythinking/xormplus/xorm/names"
 )
 
 var (

@@ -13,11 +13,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xormplus/xorm/caches"
-	"github.com/xormplus/xorm/convert"
-	"github.com/xormplus/xorm/dialects"
-	"github.com/xormplus/xorm/names"
-	"github.com/xormplus/xorm/schemas"
+	"github.com/yyythinking/xormplus/xorm/caches"
+	"github.com/yyythinking/xormplus/xorm/convert"
+	"github.com/yyythinking/xormplus/xorm/dialects"
+	"github.com/yyythinking/xormplus/xorm/names"
+	"github.com/yyythinking/xormplus/xorm/schemas"
 )
 
 var (

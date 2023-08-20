@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/xormplus/xorm/internal/utils"
-	"github.com/xormplus/xorm/schemas"
+	"github.com/yyythinking/xormplus/xorm/internal/utils"
+	"github.com/yyythinking/xormplus/xorm/schemas"
 )
 
 func (statement *Statement) ConvertIDSQL(sqlStr string) string {

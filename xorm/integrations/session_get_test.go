@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xormplus/xorm/contexts"
-	"github.com/xormplus/xorm/schemas"
+	"github.com/yyythinking/xormplus/xorm/contexts"
+	"github.com/yyythinking/xormplus/xorm/schemas"
 
 	"github.com/stretchr/testify/assert"
 )

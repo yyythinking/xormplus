@@ -11,11 +11,11 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/xormplus/builder"
-	"github.com/xormplus/xorm/core"
-	"github.com/xormplus/xorm/dialects"
-	"github.com/xormplus/xorm/internal/utils"
-	"github.com/xormplus/xorm/schemas"
+	"github.com/yyythinking/xormplus/builder"
+	"github.com/yyythinking/xormplus/xorm/core"
+	"github.com/yyythinking/xormplus/xorm/dialects"
+	"github.com/yyythinking/xormplus/xorm/internal/utils"
+	"github.com/yyythinking/xormplus/xorm/schemas"
 )
 
 func (statement *Statement) genSelectSql(dialect dialects.Dialect, rownumber string) string {

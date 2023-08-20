@@ -11,11 +11,11 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/xormplus/xorm/convert"
-	"github.com/xormplus/xorm/dialects"
-	"github.com/xormplus/xorm/internal/json"
-	"github.com/xormplus/xorm/internal/utils"
-	"github.com/xormplus/xorm/schemas"
+	"github.com/yyythinking/xormplus/xorm/convert"
+	"github.com/yyythinking/xormplus/xorm/dialects"
+	"github.com/yyythinking/xormplus/xorm/internal/json"
+	"github.com/yyythinking/xormplus/xorm/internal/utils"
+	"github.com/yyythinking/xormplus/xorm/schemas"
 )
 
 func (statement *Statement) ifAddColUpdate(col *schemas.Column, includeVersion, includeUpdated, includeNil,

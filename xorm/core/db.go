@@ -13,9 +13,9 @@ import (
 	"regexp"
 	"sync"
 
-	"github.com/xormplus/xorm/contexts"
-	"github.com/xormplus/xorm/log"
-	"github.com/xormplus/xorm/names"
+	"github.com/yyythinking/xormplus/xorm/contexts"
+	"github.com/yyythinking/xormplus/xorm/log"
+	"github.com/yyythinking/xormplus/xorm/names"
 )
 
 var (

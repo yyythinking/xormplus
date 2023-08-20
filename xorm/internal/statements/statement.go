@@ -12,14 +12,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xormplus/builder"
-	"github.com/xormplus/xorm/contexts"
-	"github.com/xormplus/xorm/convert"
-	"github.com/xormplus/xorm/dialects"
-	"github.com/xormplus/xorm/internal/json"
-	"github.com/xormplus/xorm/internal/utils"
-	"github.com/xormplus/xorm/schemas"
-	"github.com/xormplus/xorm/tags"
+	"github.com/yyythinking/xormplus/builder"
+	"github.com/yyythinking/xormplus/xorm/contexts"
+	"github.com/yyythinking/xormplus/xorm/convert"
+	"github.com/yyythinking/xormplus/xorm/dialects"
+	"github.com/yyythinking/xormplus/xorm/internal/json"
+	"github.com/yyythinking/xormplus/xorm/internal/utils"
+	"github.com/yyythinking/xormplus/xorm/schemas"
+	"github.com/yyythinking/xormplus/xorm/tags"
 )
 
 var (

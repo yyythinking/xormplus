@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/xormplus/builder"
-	"github.com/xormplus/xorm/schemas"
+	"github.com/yyythinking/xormplus/builder"
+	"github.com/yyythinking/xormplus/xorm/schemas"
 )
 
 type ErrUnsupportedExprType struct {
